@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithms Visualizer</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Sorting Algorithms Visualizer</h1>
+    <div class="controls">
+        <label for="array-size">Array Size: <span id="array-size-display">30</span></label>
+        <input type="range" id="array-size" min="10" max="100" value="30" oninput="updateArraySizeDisplay()">
+        
+        <label for="speed">Sorting Speed:</label>
+        <select id="speed">
+            <option value="200">Slow</option>
+            <option value="100" selected>Normal</option>
+            <option value="50">Fast</option>
+            <option value="10">Very Fast</option>
+        </select>
+
+        <label for="speed">Select Algorithm:</label>
+        <select id="algorithm">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+        </select>
+        <button onclick="startSort()">Start</button>
+        <button onclick="stopSort()">Stop</button>
+        <button onclick="resetArray()">Reset</button>
+    </div>
+    <div id="array-container"></div>
+    <script src="index.js"></script>
+</body>
+</html>
